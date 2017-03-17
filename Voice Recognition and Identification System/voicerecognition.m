@@ -1,5 +1,5 @@
 %% Project: Voice Recognition and Identification system
-% By  Mohammad Kabajah Birzeit University 
+% By  Mohammad Kabajah
 %
 %--------------------------------------------------------------------------
 
