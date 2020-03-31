@@ -5,3 +5,7 @@ This project tackles the automatic spoken language recognition by a computer. Fr
 First Approach: 
 
 ![GMM-SVM MODEL](GMM-SVM.jpg)
+
+Second Approach: 
+
+![LID MODEL](LIDsystem.PNG)
