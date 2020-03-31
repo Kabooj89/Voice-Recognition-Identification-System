@@ -1,25 +1,15 @@
 # Voice-Recognition-Identification-System
-The two fundamental tasks of project: identification and recognition. The goal of speaker recognition is to recognize a person automatically from his or her voice. 
-Methodology : 
-• Mel frequency Cepstral Coefficients (MFCCs) have been used for feature extraction. 
-    MFCCs are commonly derived as follows:
-    Take the Fourier transform of (a windowed excerpt of) a signal.
-    Map the powers of the spectrum obtained above onto the mel scale, using triangular overlapping windows.
-    Take the logs of the powers at each of the mel frequencies.
-    Take the discrete cosine transform of the list of mel log powers, as if it were a signal.
-    The MFCCs are the amplitudes of the resulting spectrum.
-• Vector quantization technique is used to minimize the amount of data to be handled.
-    A simple training algorithm for vector quantization is[citation needed]:
-    Pick a sample point at random
-    Move the nearest quantization vector centroid towards this sample point, by a small fraction of the distance
-    Repeat
-    
-A more sophisticated algorithm reduces the bias in the density matching estimation, and ensures that all points are used, by including an extra sensitivity parameter[citation needed]:
-    Increase each centroid's sensitivity by a small amount
-    Pick a sample point P at random
-    For each quantization vector centroid, let d(P,c_{i})} {d(P,c_{i})} denote the distance of {P} P and {c_{i}} c_{i}
-    Find the centroid for which d(P,c_{i})-s_{i}} d(P,c_{i})-s_{i}} is the smallest
-    Move {c_{i}} towards P by a small fraction of the distance
-    Set  s_{i} to zero
-    Repeat
-    
+Thanks to the globalization, the world becomes more and more a small village, and with the rapid growth of information technology, human-to-machine communication becomes more and more usual, in particular voice interaction with a machine. For a complete interaction the computer should recognize human speech, however, some applications do not need full speech recognition but only identification of the spoken language. Moreover, this identification may require to be done relatively quickly, so other applications can operate quickly.
+Automatic spoken Language Identification (LID) is a part of such human to machine interface, and even if it may be clear for a human ear, language identification is difficult for a computer. LID refers to the process of having a spoken language recognized by a computer [Zissman and Berkling, 2001]. LID systems could be used, for instance, in airport or hospitals to help international visitors by electronic guide or in call centers to find automatically an interlocutor who matches the language of the caller or for automatically classifying some speech data from a huge database. Moreover, in some applications, an automatic LID system should be very quick, for example in case of an emergency call, where each second could be vital. In the case reported in this report, the LID system is being built as an initial prototype for the firm Snell, and the specific requirements for the LID system that was developed were provided by this firm and are presented in the last chapter of the report.
+Automatic spoken (LID) is not fresh. Research has been done since the 1970s and LID systems have become more and more complex and complicated. The simplest systems use only acoustic features; then to increase the accuracy, phonotactics features like phoneme recognition are added. The most complicated systems use word level approaches and analyze the syntax of the language. The top performance of these kinds of systems is high [Zissman, 1996]. However this top performance is obtained under some strict lab conditions and existing LID techniques need to be significantly improved for real applications. This project attempts to investigate several key issues related to applying LID in real applications, and to go deeper in this interesting world.
+In general, there are two main approaches to building LID systems: The first approach generally deals with only acoustic features and unlabeled data. The language identification features are extracted then the model is trained. The typical model used is a Gaussian Mixture Models (GMM) [Reynolds, 2008] for each language to be identified because of GMM’s high performance and its easy computation. The second approach is to use a phoneme recognizer of
+! 1! !
+one language or several recognizers in parallel. Then, models for different languages are built and used to identify the phoneme sequences of a test sample of speech. The resulting sequences can then be used in decision-making.
+1.2. Problem statement and contribution
+Language Identification considered as one of the hot topics of research. It’s found to identify the language spoken within an utterance. The challenge that this task presents is that no prior information is available indicating the content of the utterance or the identity of the speaker.
+Working in such work considered interesting field, it’s a new topic, aims to improve the technology of future, and there are a very promising results.
+In this project we will try to make an application which its efficiency high and to develop techniques targeted at producing a fast and more accurate automatic spoken LID system compared to the previous NIST Language Recognition Evaluation.
+1.3. Possible applications
+Speech is one of the most natural and efficient means for communicating information among a group of people. So researchers have made significant efforts to create methods for automatically extracting the fundamental information that a speech utterance conveys.
+Our project considered as the basic application for the other possible applications related to our application where if we want to translate any language to communicate with each other like in hospital, airport, university and conference we must first defined the language of the speaker.
+Figure 1.1 illustrates how a set of four prototypical speech-information extraction modules applied to a speech utterance spoken over a telephone channel. These modules include speech recognition (or word transcription), topic identification, language identification, and speaker recognition [Marc A. Zissman , 2001].
